@@ -13,9 +13,15 @@ outputs:
   - name: source-code-built
 
 run:
-  path: "source-code/gradlew"
-  args: ["--build-file", "source-code/build.gradle", "assemble", "ls -la", "cp ./build/libs/spring-music.jar source-code-built/spring-music.jar"]
-
+  path: sh
+  args: 
+  	- -exc
+  	- |
+  	cd source-code
+  	gradle assemble 
+  	ls - la 
+  	cp ./build/libs/spring-music.jar source-code-built/spring-music.jar
+  	
 params:
   TERM: -dumb
   GRADLE_OPTS: -Dorg.gradle.native=false
