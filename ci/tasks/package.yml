@@ -15,12 +15,12 @@ outputs:
 run:
   path: sh
   args: 
-  	- -exc
-  	- |
-  	cd source-code
-  	gradle assemble 
-  	ls - la 
-  	cp ./build/libs/spring-music.jar source-code-built/spring-music.jar
+  - -exc
+  - |
+  cd source-code
+  gradle assemble 
+  ls - la 
+  cp ./build/libs/spring-music.jar source-code-built/spring-music.jar
   	
 params:
   TERM: -dumb
