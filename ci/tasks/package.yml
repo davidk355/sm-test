@@ -9,9 +9,12 @@ image_resource:
 inputs:
   - name: source-code
 
+outputs:
+  - name: source-code-built
+
 run:
   path: "source-code/gradlew"
-  args: ["--build-file", "source-code/build.gradle", "assemble"]
+  args: ["--build-file", "source-code/build.gradle", "assemble", "cp ./builds/libs/spring-music.jar /tmp/build/put/source-code-built/spring-music.jar"]
 
 params:
   TERM: -dumb
