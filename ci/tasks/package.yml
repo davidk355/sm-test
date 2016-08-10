@@ -14,7 +14,7 @@ outputs:
 
 run:
   path: "source-code/gradlew"
-  args: ["--build-file", "source-code/build.gradle", "assemble", "cp ./builds/libs/spring-music.jar /tmp/build/put/source-code-built/spring-music.jar"]
+  args: ["--build-file", "source-code/build.gradle", "assemble", "cp ./builds/libs/spring-music.jar source-code-built/spring-music.jar"]
 
 params:
   TERM: -dumb
