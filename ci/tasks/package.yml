@@ -20,7 +20,6 @@ run:
     cd source-code
     gradle assemble
     ls - la
-    cp ./build/libs/spring-music.jar source-code-built/spring-music.jar
   	
 params:
   TERM: -dumb
