@@ -18,7 +18,7 @@ run:
   - -exc
   - |
     cd source-code
-    build.gradle assemble
+    source-code/build.gradle assemble
     ls - la
     cp ./build/libs/spring-music.jar source-code-built/spring-music.jar
 
