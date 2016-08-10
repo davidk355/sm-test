@@ -2,14 +2,28 @@ resources:
   - name: source-code
     type: git
     source:
-      uri: https://github.com/davidk355/cc-sb-test.git
+      uri: https://github.com/davidk355/sm-test.git
       branch: master
 
+  - name: resource-deploy-web-app
+    type: cf
+    source:
+      api: https://api.local.pcfdev.io
+      username: {{cf-username}}
+      password: {{cf-password}}
+      organization: pcfdev-org
+      space: pcfdev-space
+      skip_cert_check: true
+
 jobs:
-  - name: package
+  - name: job-deploy-app
+    serial: true
     plan:
-    - get: source-code
-      trigger: true
+    - {get: source-code, trigger: true}
     - task: package
       privileged: true
       file: source-code/ci/tasks/package.yml
+    - put: resource-deploy-web-app
+      params:
+        manifest: source-code/manifest.yml
+        path: source-code-built/spring-music.jar
