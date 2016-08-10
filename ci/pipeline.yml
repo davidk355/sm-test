@@ -18,11 +18,11 @@ resources:
   - name: resource-deploy-web-app-pws
     type: cf
     source:
-      api: https://api.run.pivotal.io
-      username: dkari@pivotal.io
-      password: Dkvt140611
-      organization: DK-Development
-      space: development
+      api: {{cf-pws-api}}
+      username: {{cf-pws-username}}
+      password: {{cf-pws-password}}
+      organization: {{cf-pws-organization}}
+      space: {{cf-pws-space}}
       skip_cert_check: true
 
 jobs:
