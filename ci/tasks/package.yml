@@ -19,7 +19,7 @@ run:
   - |
     cd source-code
     ./gradlew assemble
-    ls - la
+    'ls - la'
     cp ./build/libs/spring-music.jar source-code-built/spring-music.jar
 
 params:
