@@ -25,6 +25,16 @@ resources:
       space: {{cf-pws-space}}
       skip_cert_check: true
 
+  - name: resource-deploy-web-app-pez
+    type: cf
+    source:
+      api: {{cf-pez-api}}
+      username: {{cf-pez-username}}
+      password: {{cf-pez-password}}
+      organization: {{cf-pez-organization}}
+      space: {{cf-pez-space}}
+      skip_cert_check: true
+
 jobs:
   - name: job-deploy-app
     serial: true
@@ -38,6 +48,10 @@ jobs:
         manifest: source-code/manifest.yml
         path: source-code-built/spring-music.jar
     - put: resource-deploy-web-app-pws
+      params:
+        manifest: source-code/manifest.yml
+        path: source-code-built/spring-music.jar
+    - put: resource-deploy-web-app-pez
       params:
         manifest: source-code/manifest.yml
         path: source-code-built/spring-music.jar
