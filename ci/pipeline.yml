@@ -51,7 +51,7 @@ jobs:
       params:
         manifest: source-code/manifest.yml
         path: source-code-built/spring-music.jar
-    - put: resource-deploy-web-app-pez
-      params:
-        manifest: source-code/manifest.yml
-        path: source-code-built/spring-music.jar
+#    - put: resource-deploy-web-app-pez
+#      params:
+#        manifest: source-code/manifest.yml
+#        path: source-code-built/spring-music.jar
