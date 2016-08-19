@@ -1,13 +1,6 @@
 [
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
-        "artist": "David Kari",
-        "title": "My personal release",
-        "releaseYear": "2016",
-        "genre": "Lounge"
-    },
-    {
-        "_class": "org.cloudfoundry.samples.music.domain.Album",
         "artist": "Nirvana",
         "title": "Nevermind",
         "releaseYear": "1991",
