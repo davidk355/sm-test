@@ -1,6 +1,13 @@
 [
     {
         "_class": "org.cloudfoundry.samples.music.domain.Album",
+        "artist": "The Laurels",
+        "title": "Plains",
+        "releaseYear": "2015",
+        "genre": "Psychedelic"
+    },
+    {
+        "_class": "org.cloudfoundry.samples.music.domain.Album",
         "artist": "Nirvana",
         "title": "Nevermind",
         "releaseYear": "1991",
